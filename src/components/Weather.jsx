@@ -55,7 +55,9 @@ function Weather() {
   const [loading, setLoading] = useState(false);
 
   const search = async () => {
-    const apiKey = "49e29f600e8ac6869390c7b2f9d9bdb4";
+    // const apiKey = "49e29f600e8ac6869390c7b2f9d9bdb4";
+    const apiKey = import.meta.env.VITE_API_KEY;
+
     // try {
     //     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=Metric&appid=${apiKey}`
     //     const response = await fetch(url);
