@@ -12,6 +12,7 @@ function WeatherInfo({ weatherData, showWeather }) {
           )}
           <img src={showWeather[0].img} alt="..." className="mx-auto w-52" />
           <h3 className="text-2xl font-bold">{showWeather[0].type}</h3>
+          {weatherData && weatherData.main && (
           <div className="flex items-center justify-center">
             <img className="h-8" src={Termometer} alt=".." />
             <h2 className="flex items-center font-bold text-3xl">
@@ -19,6 +20,7 @@ function WeatherInfo({ weatherData, showWeather }) {
               <img className="h-6" src={Celcius} alt="..." />
             </h2>
           </div>
+          )}
         </div>
       )}
     </>
